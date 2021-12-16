@@ -1,13 +1,38 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto&display=swap');
 
+/*---------------- Custom Properties --------------*/
+
+:root {
+    --ff-primary: "Roboto", "Helvetica", "Sans-serif";
+    --ff-secondary: "Playfair Display", serif;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent-title: #107dd6;
+    --clr-accent-icon: #c23843;
+    --clr-paragraph: #a0a09e;
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
 /* start: global styles */
 body {
     font-family: "Roboto", "Helvetica", "Sans-serif";
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    background: #28262e;
+    font-size: var(--fs-body);
     font-weight: 400;
-    color: #777;
+    /* color: #777; */
     line-height: 1.7;
 }
 
@@ -48,7 +73,7 @@ h1 {
 
 h2 {
     font-size: 2.5rem;
-    color: #f69314;
+    color: var(--clr-accent-title);
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -73,7 +98,7 @@ p {
 }
 
 button.rounded {
-    background: #f69314;
+    background: var(--clr-accent-icon);
     border: none;
     color: #fff;
     font-size: 16px;
@@ -108,8 +133,9 @@ header {
 #logo {
     font-family: "Roboto", "Helvetica", "Sans-serif";
     font-size: 1.7rem;
-    font-weight: 800;
-    color: #fff;
+    font-weight: var(--fw-bold);
+    color: var(--clr-accent-title);
+    text-shadow: .5px .5px var(--clr-light);
     text-decoration: none;
     position: relative;
     top: 4px;
@@ -168,7 +194,7 @@ header ul.is-sticky li a.active {
 
 /* start: hero section styles */
 #hero {
-    background: url('https://onclickwebdesign.com/wp-content/uploads/hero_1.jpg') center center no-repeat;
+    background: url('https://cdn.pixabay.com/photo/2019/02/06/16/32/architect-3979490_960_720.jpg') center center no-repeat;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -210,7 +236,7 @@ header ul.is-sticky li a.active {
 /* start: how it works styles */
 #how-it-works {
     padding: 3rem 0;
-    background: #f8f9fa;
+    background: #2f2e33;
     text-align: center;
 }
 
@@ -223,40 +249,44 @@ header ul.is-sticky li a.active {
 }
 
 #how-it-works h4 {
-    color: #343a40;
+    color: var(--clr-light);
     margin-top: 1rem;
 }
 
 #how-it-works span.fas {
-    color: #f69314;
+    color: var(--clr-accent-icon);
     font-size: 35px;
+}
+
+#how-it-works p{
+    color: var(--clr-paragraph);
 }
 /* end: how it works styles */
 
-/* start: properties styles */
-#properties {
+/* start: projects styles */
+#projects {
     margin: 4rem 0 8rem;
     position: relative;
 }
 
-#properties h2 {
+#projects h2 {
     margin-bottom: 3rem;
 }
 
-#properties .container {
+#projects .container {
     position: relative;
 }
 
-#properties .container:before {
+#projects .container:before {
     content: "/";
     position: absolute;
     right: 80px;
     top: 18px;
-    color: #999;
+    color:var(--clr-light)
 }
 
-#properties-slider a.slick-arrow {
-    color: #000;
+#projects-slider a.slick-arrow {
+    color: var(--clr-accent-title);
     position: absolute;
     top: -78px;
     right: 0;
@@ -265,64 +295,58 @@ header ul.is-sticky li a.active {
     text-decoration: none;
 }
 
-#properties-slider a.slick-prev {
+#projects-slider a.slick-prev {
     right: 80px;
 }
 
-#properties-slider .slick-slide {
+#projects-slider .slick-slide {
     padding: 0 15px;
 }
 
-#properties-slider img {
+#projects-slider img {
     width: 100%;
     display: block;
 }
 
-#properties-slider .property-details {
+#projects-slider .project-details {
     padding: 1rem;
 }
 
-#properties-slider .price {
+#projects-slider .price {
     font-size: 1.2rem;
-    color: #343a40;
+    color: var(--clr-light);
     font-weight: 800;
     margin: 0 0 0.5rem 0;
 }
 
-#properties-slider .property-details span {
+#projects-slider .project-details span {
     font-size: 0.8rem;
     padding-right: 15px;
 }
 
-#properties-slider .property-details span.baths {
+#projects-slider .project-details span.baths {
     padding-left: 10px;
 }
 
-#properties-slider .property-details span.sqft {
-    padding-right: 0;
-    padding-left: 10px;
+#projects-slider .project-details span.ciudad{
+    color: var(--clr-light);
 }
 
-#properties-slider .property-details span.beds,
-#properties-slider .property-details span.baths {
-    border-right: 1px solid #888;
-}
-
-#properties-slider .property-details address {
+#projects-slider{
     font-size: 0.8rem;
     font-style: normal;
     margin-top: 0.5rem;
 }
 
-#properties button.rounded {
+#projects button.rounded {
     display: block;
     margin: 2rem auto 0;
     width: 350px;
 }
-/* end: properties styles */
+/* end: projects styles */
 
 /* start: agents styles */
-#agents {
+/* #agents {
     margin: 4rem 0 6rem;
     padding: 0 0 6rem;
     border-bottom: 1px solid #ccc;
@@ -356,12 +380,13 @@ header ul.is-sticky li a.active {
 #agents .card h3,
 #agents .card p {
     padding-left: 1rem;
-}
+} */
 /* end: agents styles */
 
 /* start: best real estate company styles */
 #the-best {
     margin: 2rem 0;
+    background: #2f2e33;
 }
 
 #the-best .flex > img {
@@ -379,12 +404,21 @@ header ul.is-sticky li a.active {
 
 #the-best ul li {
     margin: 10px 0;
+    color: var(--clr-paragraph);
 }
+
+#the-best p{
+    color: var(--clr-light);
+}
+
+#the-best button.rounded:hover {
+    background-color: var(--clr-light);
+}
+
 /* end: best real estate company styles */
 
 /* start: services styles */
 #services {
-    background: #f8f9fa;
     padding: 6rem 0;
     margin: 8rem 0;
     border-bottom: 1px solid #dee2e6;
@@ -393,6 +427,11 @@ header ul.is-sticky li a.active {
 #services h2 {
     text-align: center;
     margin-bottom: 3rem;
+    color: var(--clr-light);
+}
+
+#services h3{
+    color: var(--clr-light);
 }
 
 #services .flex {
@@ -401,11 +440,13 @@ header ul.is-sticky li a.active {
 
 #services .flex > div {
     width: 30%;
+    padding-top: 1rem;
     margin-bottom: 2rem;
+    background: #2f2e33;;
 }
 
 #services .flex > div .fas {
-    color: #f69314;
+    color: var(--clr-accent-icon);
     font-size: 40px;
     float: left;
     margin-top: 15px;
@@ -418,10 +459,14 @@ header ul.is-sticky li a.active {
     width: 75%;
 }
 
-#services .flex > div a {
-    color: #f69314;
-    text-decoration: none;
+#services p {
+    color: var(--clr-paragraph);
 }
+/* 
+#services .flex > div a {
+    color: var(--clr-accent-icon);
+    text-decoration: none;
+} */
 
 #services .flex > div a:hover {
     text-decoration: underline;
@@ -439,6 +484,7 @@ header ul.is-sticky li a.active {
 
 #testimonials-slider .slick-slide {
     text-align: center;
+    color: var(--clr-light);
 }
 
 #testimonials-slider blockquote {
@@ -449,18 +495,18 @@ header ul.is-sticky li a.active {
 }
 
 #testimonials-slider .testimonials-caption {
-    width: 200px;
+    width: 500px; /*initial value 200*/
     margin: 0 auto;
 }
 
 #testimonials-slider .testimonials-caption img {
     float: left;
     border-radius: 30px;
-    width: 60px;
+    width: 500px; /*initial value is 60px*/
 }
 
 .testimonials-caption p {
-    position: relative;
+    position: relative; /*initial value relative*/
     top: 13px;
     font-size: 1.2rem;
 }
@@ -469,7 +515,7 @@ header ul.is-sticky li a.active {
     text-decoration: none;
     position: absolute;
     font-size: 40px;
-    color: #222;
+    color: var(--clr-accent-icon);
     top: 50%;
     margin-top: -35px;
     z-index: 1;
@@ -480,7 +526,7 @@ header ul.is-sticky li a.active {
 /* end: testimonials styles */
 
 /* start: contact us styles */
-#contact {
+/* #contact {
     background: #f8f9fa;
     padding: 4rem 0 8rem;
 }
@@ -560,7 +606,7 @@ header ul.is-sticky li a.active {
 
 #address-container a:hover {
     text-decoration: underline;
-}
+} */
 /* end: contact us styles */
 
 /* start: footer styles */
@@ -590,6 +636,7 @@ footer .footer-about {
 
 footer .footer-about p {
     width: 65%;
+    color: var(--clr-paragraph);
 }
 
 footer .footer-quick-links {
@@ -623,7 +670,7 @@ footer .footer-subscribe {
     position: relative;
 }
 
-footer .footer-subscribe input {
+/* footer .footer-subscribe input {
     border-radius: 30px;
     height: 43px;
     font-family: "Roboto", "Helvetica", "Sans-serif";
@@ -653,28 +700,64 @@ footer button.right-rounded {
 footer button.right-rounded:hover {
     background: #fff;
 }
+ */
+/* footer .footer-subscribe ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+} */
 
-footer .footer-subscribe ul {
+footer .footer-contact-details,
+.follow-us-icons {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-footer .footer-subscribe ul li {
+footer .fa-map-marked-alt,
+.fa-envelope-open-text,
+.fa-phone-volume{
+    color: var(--clr-accent-title);
+    padding-right: 3px;
+}
+
+footer .footer-contact-details{
+    color: var(--clr-paragraph);
+}
+
+/* footer .footer-subscribe ul li {
+    display: inline-block;
+    margin: 0 16px;
+} */
+
+footer .follow-us-icons li {
     display: inline-block;
     margin: 0 16px;
 }
 
-footer .footer-subscribe ul li:first-child {
+/* footer .footer-subscribe ul li:first-child {
+    margin-left: 0;
+} */
+
+footer .follow-us-icons li:first-child {
     margin-left: 0;
 }
 
-footer .footer-subscribe ul li a {
+/* footer .footer-subscribe ul li a {
     text-decoration: none;
     color: #777;
+} */
+
+/* footer .footer-subscribe ul li a:hover {
+    color: #fff;
+} */
+
+footer .footer-subscribe > ul .fab{
+    color: var(--clr-accent-icon);
+    font-size: 1.5rem;
 }
 
-footer .footer-subscribe ul li a:hover {
+footer .footer-subscribe ul .fab:hover {
     color: #fff;
 }
 
@@ -794,16 +877,24 @@ footer small a:hover {
         font-size: 1.2rem;
     }
 
-    #properties .container:before {
+    #testimonials-slider .testimonials-caption {
+        width: 350px; /*initial value 200*/
+    }
+    
+    #testimonials-slider .testimonials-caption img {
+        width: 350px; /*initial value is 60px*/
+    }
+
+    #projects .container:before {
         top: 2px;
         font-size: 0.85rem;
     }
 
-    #properties-slider a.slick-arrow {
+    #projects-slider a.slick-arrow {
         font-size: 0.85rem;
     }
 
-    #properties button.rounded {
+    #projects button.rounded {
         width: 300px;
     }
 
@@ -883,7 +974,7 @@ footer small a:hover {
         margin-top: 2rem;
     }
 
-    #properties button.rounded {
+    #projects button.rounded {
         width: 250px;
     }
 
@@ -906,6 +997,14 @@ footer small a:hover {
 
     #testimonials-slider .slick-arrow {
         display: none !important;
+    }
+
+    #testimonials-slider .testimonials-caption {
+        width: 250px; /*initial value 200*/
+    }
+    
+    #testimonials-slider .testimonials-caption img {
+        width: 250px; /*initial value is 60px*/
     }
 
     #contact {
@@ -931,13 +1030,21 @@ footer small a:hover {
      width: 100%;
   }
   
-  #properties button.rounded {
+  #projects button.rounded {
      max-width: 250px;
      width: 100%;
   }
   
   nav ul {
     width: 200px;
+  }
+
+  #testimonials-slider .testimonials-caption {
+    width: 200px; /*initial value 200*/
+  }
+
+  #testimonials-slider .testimonials-caption img {
+    width: 200px; /*initial value is 60px*/
   }
 }
 /* end: media queries */

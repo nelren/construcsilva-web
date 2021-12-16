@@ -4,7 +4,7 @@ $(function () {
     let navMenu = $('#nav-menu');
     let navToggle = $('#nav-toggle');
 
-   $('#properties-slider').slick({
+   $('#projects-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         prevArrow: '<a href="#" class="slick-arrow slick-prev">previous</a>',
@@ -65,15 +65,15 @@ $(function () {
 
        if (scrollTop > 0) {
            navMenu.addClass('is-sticky');
-           logo.css('color', '#000');
+           /* logo.css('color', '#107dd6'); */
            headerElem.css('background', '#fff');
            navToggle.css('border-color', '#000');
            navToggle.find('.strip').css('background-color', '#000');
        } else {
            navMenu.removeClass('is-sticky');
-           logo.css('color', '#fff');
+           /* logo.css('color', '#fff'); */
            headerElem.css('background', 'transparent');
-           navToggle.css('bordre-color', '#fff');
+           navToggle.css('border-color', '#fff');
            navToggle.find('.strip').css('background-color', '#fff');
        }
 
