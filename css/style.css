@@ -25,6 +25,11 @@
 }
 
 /* start: global styles */
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Roboto", "Helvetica", "Sans-serif";
     margin: 0;
@@ -132,7 +137,7 @@ header {
 
 .logo-img{
     height: 50px;
-    width: 50px;
+    width: px;
     background-color:var(--clr-light);
 }
 
@@ -271,7 +276,8 @@ header ul.is-sticky li a.active {
 
 /* start: projects styles */
 #projects {
-    margin: 4rem 0 8rem;
+    padding-top: 5rem;
+    margin: 1rem 0 6rem;
     position: relative;
 }
 
@@ -391,7 +397,9 @@ header ul.is-sticky li a.active {
 
 /* start: best real estate company styles */
 #the-best {
-    margin: 2rem 0;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin: 2rem ;
     background: #2f2e33;
 }
 
@@ -417,16 +425,27 @@ header ul.is-sticky li a.active {
     color: var(--clr-light);
 }
 
+#the-best a{
+    color: var(--clr-light);
+    text-decoration: none;
+}
+
+#the-best a:hover{
+    color: var(--clr-accent-icon);
+}
+
 #the-best button.rounded:hover {
     background-color: var(--clr-light);
 }
+
+
 
 /* end: best real estate company styles */
 
 /* start: services styles */
 #services {
     padding: 6rem 0;
-    margin: 8rem 0;
+    margin: 1rem 0;
     border-bottom: 1px solid #dee2e6;
 }
 
@@ -629,7 +648,7 @@ footer .flex {
 footer h5 {
     color: #fff;
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: bold;
 }
 
 footer h5.follow-us {
@@ -768,6 +787,7 @@ footer .footer-subscribe ul .fab:hover {
 }
 
 footer small {
+    color: var(--clr-light);
     margin-top: 3rem;
     font-size: 1rem;
     display: block;
