@@ -130,6 +130,12 @@ header {
     z-index: 3;
 }
 
+.logo-img{
+    height: 50px;
+    width: 50px;
+    background-color:var(--clr-light);
+}
+
 #logo {
     font-family: "Roboto", "Helvetica", "Sans-serif";
     font-size: 1.7rem;
