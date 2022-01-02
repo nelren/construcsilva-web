@@ -11,9 +11,12 @@
     
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent-title: #107dd6;
+    --clr-accent-title: #fff;
     --clr-accent-icon: #c23843;
     --clr-paragraph: #a0a09e;
+    --clr-background-section: #eee;
+    --clr-background: #055989;
+    --clr-background-box: #0076a3;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -34,7 +37,9 @@ body {
     font-family: "Roboto", "Helvetica", "Sans-serif";
     margin: 0;
     padding: 0;
-    background: #28262e;
+    /* background: linear-gradient(to bottom right, rgba(5,89,137,100), rgba(0,118,163,100)); */
+    background: rgb(2,0,36);
+    background: linear-gradient(to bottom right, rgba(5,89,137,1) 0%, rgba(0,118,163,1) 35%, rgba(0,212,255,1) 100%);
     font-size: var(--fs-body);
     font-weight: 400;
     /* color: #777; */
@@ -232,7 +237,7 @@ header ul.is-sticky li a.active {
     left: 0;
     right: 0;
     z-index: 2;
-    color: #fff;
+    color: var(--clr-light);
     width: 500px;
     text-align: center;
 }
@@ -247,12 +252,13 @@ header ul.is-sticky li a.active {
 /* start: how it works styles */
 #how-it-works {
     padding: 3rem 0;
-    background: #2f2e33;
+    background-color: var(--clr-background-section);
     text-align: center;
 }
 
 #how-it-works h2 {
     margin-bottom: 3rem;
+    color:var(--clr-background-box);
 }
 
 #how-it-works .flex > div {
@@ -260,7 +266,7 @@ header ul.is-sticky li a.active {
 }
 
 #how-it-works h4 {
-    color: var(--clr-light);
+    color: var(--clr-dark);
     margin-top: 1rem;
 }
 
@@ -400,7 +406,7 @@ header ul.is-sticky li a.active {
     padding-top: 6rem;
     padding-bottom: 6rem;
     margin: 2rem ;
-    background: #2f2e33;
+    background: var(--clr-background-box);
 }
 
 #the-best .flex > img {
@@ -467,7 +473,7 @@ header ul.is-sticky li a.active {
     width: 30%;
     padding-top: 1rem;
     margin-bottom: 2rem;
-    background: #2f2e33;;
+    background: var(--clr-background-box);
 }
 
 #services .flex > div .fas {

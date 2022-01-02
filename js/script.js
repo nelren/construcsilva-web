@@ -65,13 +65,13 @@ $(function () {
 
        if (scrollTop > 0) {
            navMenu.addClass('is-sticky');
-           /* logo.css('color', '#107dd6'); */
+           logo.css('color', '#055989');
            headerElem.css('background', '#fff');
            navToggle.css('border-color', '#000');
            navToggle.find('.strip').css('background-color', '#000');
        } else {
            navMenu.removeClass('is-sticky');
-           /* logo.css('color', '#fff'); */
+           logo.css('color', '#fff');
            headerElem.css('background', 'transparent');
            navToggle.css('border-color', '#fff');
            navToggle.find('.strip').css('background-color', '#fff');
