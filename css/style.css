@@ -13,7 +13,8 @@
     --clr-dark: #303030;
     --clr-accent-title: #fff;
     --clr-accent-icon: #c23843;
-    --clr-paragraph: #a0a09e;
+    --clr-paragraph1: rgb(238 238 238);/* #a0a09e; */
+    --clr-paragraph2: #303030;;
     --clr-background-section: #eee;
     --clr-background: #055989;
     --clr-background-box: #0076a3;
@@ -226,7 +227,8 @@ header ul.is-sticky li a.active {
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(52, 58, 64, 0.9);
+    /* background: rgba(52, 58, 64, 0.9); */
+    background: rgba(5, 89, 137, 0.7);
     z-index: 1;
 }
 
@@ -266,8 +268,9 @@ header ul.is-sticky li a.active {
 }
 
 #how-it-works h4 {
-    color: var(--clr-dark);
+    color: var(--clr-accent-icon);
     margin-top: 1rem;
+    font-weight: 700;
 }
 
 #how-it-works span.fas {
@@ -276,7 +279,7 @@ header ul.is-sticky li a.active {
 }
 
 #how-it-works p{
-    color: var(--clr-paragraph);
+    color: var(--clr-paragraph2);
 }
 /* end: how it works styles */
 
@@ -298,13 +301,13 @@ header ul.is-sticky li a.active {
 #projects .container:before {
     content: "/";
     position: absolute;
-    right: 80px;
+    right: 102px; /*original value 80px*/
     top: 18px;
     color:var(--clr-light)
 }
 
 #projects-slider a.slick-arrow {
-    color: var(--clr-accent-title);
+    color: var(--clr-light);
     position: absolute;
     top: -78px;
     right: 0;
@@ -314,7 +317,7 @@ header ul.is-sticky li a.active {
 }
 
 #projects-slider a.slick-prev {
-    right: 80px;
+    right: 90px;
 }
 
 #projects-slider .slick-slide {
@@ -424,7 +427,7 @@ header ul.is-sticky li a.active {
 
 #the-best ul li {
     margin: 10px 0;
-    color: var(--clr-paragraph);
+    color: var(--clr-paragraph1);
 }
 
 #the-best p{
@@ -491,7 +494,7 @@ header ul.is-sticky li a.active {
 }
 
 #services p {
-    color: var(--clr-paragraph);
+    color: var(--clr-paragraph1);
 }
 /* 
 #services .flex > div a {
@@ -507,6 +510,7 @@ header ul.is-sticky li a.active {
 /* start: testimonials styles */
 #testimonials {
     margin-bottom: 8rem;
+    padding-top: 5rem;
 }
 
 #testimonials h2 {
@@ -667,7 +671,7 @@ footer .footer-about {
 
 footer .footer-about p {
     width: 65%;
-    color: var(--clr-paragraph);
+    color: var(--clr-paragraph2);
 }
 
 footer .footer-quick-links {
@@ -753,7 +757,7 @@ footer .fa-map-marked-alt,
 }
 
 footer .footer-contact-details{
-    color: var(--clr-paragraph);
+    color: var(--clr-paragraph2);
 }
 
 /* footer .footer-subscribe ul li {

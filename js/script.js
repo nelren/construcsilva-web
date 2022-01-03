@@ -7,8 +7,8 @@ $(function () {
    $('#projects-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: '<a href="#" class="slick-arrow slick-prev">previous</a>',
-        nextArrow: '<a href="#" class="slick-arrow slick-next">next</a>',
+        prevArrow: '<a href="#" class="slick-arrow slick-prev">anterior</a>',
+        nextArrow: '<a href="#" class="slick-arrow slick-next">siguiente</a>',
         responsive: [
             {
                 breakpoint: 1100,
